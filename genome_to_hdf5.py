@@ -77,9 +77,9 @@ class Chroms_setup:
                     
         if self.chrs==False:
             files = self.sort_chroms(self.faDir)
-            print(files)
+            # print(files)
             for file in files:
-                print(file)
+                # print(file)
                 process(os.path.join(self.faDir,file))
         else:
             process(self.faDir + self.chrs)
@@ -160,9 +160,9 @@ class Chroms_setup:
             self.effEndDict[chrom] = effectiveStart
             self.effLenDict[chrom] = effectiveLength
             self.effGapPosDict[chrom] = chromGapPos
-        print (self.effLenDict)
-        print (sum(self.effLenDict.values()))
-        print (self.effStartDict)
+        # print (self.effLenDict)
+        # print (sum(self.effLenDict.values()))
+        # print (self.effStartDict)
 
     def chr_order(self):
         pass
@@ -191,8 +191,8 @@ class Chroms_setup:
                 print ('Seting up h5 dataset took \t' + str(stop-start2) + ' seconds')
                 try:
                     npGap = np.array(list(self.gaps[k]), dtype=np.uint32)
-                    print (self.gaps[k][:2])
-                    print (self.gaps[k][-2:])
+                    # print (self.gaps[k][:2])
+                    # print (self.gaps[k][-2:])
                 except KeyError:
                     print ('Gap Key Error\t' + k)
                     npGap = np.array([0], dtype=np.uint32)
